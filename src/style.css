@@ -153,12 +153,18 @@ button:hover {
 li {
     list-style: none;
     text-align: center;
+    cursor: pointer;
 }
 
 /* Section Container */
 
+#ingredientsList {
+    text-align: center;
+}
+
 #description {
     margin-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .container {
@@ -166,14 +172,22 @@ li {
     color: beige;
 }
 
-.drink-type {
-    text-align: center;
-    margin-top: 1rem;
-}
-
 .cook {
     margin-top: 1rem;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    padding: 1rem;
+    min-width: 100px;
+    width: 100%;
+    visibility: hidden;
 }
+
+.drink-type {
+    text-align: center;
+}
+
+
 footer {
     background-color: var(--very-strong-red);
     color: beige;
@@ -187,4 +201,28 @@ footer {
     background: transparent;
     display: inline-block;
     margin: 5px 0 0 10px;
+}
+
+@media (min-width: 540px) {
+    .containerDrink {
+        display: flex;
+    }
+    .drinkImage {
+        min-width: 200px;
+    }
+    .cook {
+    margin-left: 2rem;
+    margin-top: 0;
+    }
+}
+
+@media (min-width: 1050px) {
+    .cook {
+        display: flex;
+    }
+    .ingredients-container {
+        width: 25rem;
+        margin-right: 2rem;
+    }
+
 }

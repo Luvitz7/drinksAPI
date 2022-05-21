@@ -79,8 +79,10 @@ function secondSearch() {
                 document.getElementById("drinkTitle").textContent = drink.name;
                 document.getElementById("drinkIMG").src = drink.pic;
                 document.getElementById("drinkIMG").style.visibility = "visible";
+                document.getElementById("cookContainer").style.visibility = "visible";
                 document.getElementById("drinkType").textContent = drink.type;
                 const ingredientList = document.getElementById("ingredientsList");
+                ingredientList.textContent = "Ingredients";
                 const ingredientCount = drink.ingredients.length;
                 for (let i=0; i < ingredientCount; i++) {
                     const element = document.createElement("LI");
@@ -111,11 +113,20 @@ function searchByIngredient () {
             alcohol: data.ingredients[0].strAlcohol,
             percentage: data.ingredients[0].strABV
         }
-        document.getElementById("drinkTitle").textContent = ingredient.name;
+        document.getElementById("drinkTitle").innerText = ingredient.name;
         document.getElementById("typeIngredient").textContent = "Type: "+ingredient.type;
-        document.getElementById("alcohol").textContent = "Alcoholic: "+ ingredient.alcohol;
-        document.getElementById("percentage").textContent = "% "+ ingredient.percentage;
-        document.getElementById("description").textContent = "Descprition: "+ ingredient.description;
+        if ( Boolean(ingredient.alcohol)) {
+            document.getElementById("alcohol").textContent = "Alcoholic: "+ ingredient.alcohol;
+            document.getElementById("percentage").textContent = "% "+ ingredient.percentage;
+        } else {
+            document.getElementById("alcohol").textContent = "Alcoholic: No";
+            document.getElementById("percentage").textContent = "% 0";
+        }
+        if ( Boolean(ingredient.description)) {
+            document.getElementById("description").textContent = "Descprition: "+ ingredient.description;
+        } else {
+            document.getElementById("description").textContent = "No contamos con información, disculpa";
+        }
     });
 }
 
