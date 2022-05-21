@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <title>El rincon del Borracho Refinado</title>
+</head>
+<body>
+    <header><h1>Borracho Refinado</h1></header>
+    <section class="descriptionSearch">
+        <img src="assets/icons/bar.svg" alt="cup" class="cup">
+        <h2 class="welcome">¡Bienvenido a esta pequeña aplicacion! </h2>
+        <p class="description"><b> Descripcion rapida:</b> Aquí podras hacer consultas de bebidas de todo tipo, alcholicas o sin alcohol. Para cualquier consulta solo usar los espacios de busqueda a continuación. Puedes buscar por nombre y seleccionar alguna bebida de los resultados obtenidos. Si llegas a tener duda de algun ingrediente puedes usar la siguiente sección recibiras informacion sobre el ingrediente. <i> Todas las consultas hacerlas en ingles (de momento) </i> </p>
+        <p>Esta aplicacion hace consultas a la API de <a href="https://www.thecocktaildb.com/" class="linkAPI">The CoctailDB</a> puedes visitarla haciendo click en el nombre. En la parte de abajo podras encontrar el enlace a Github para ver el código.</p>
+        <p class="enjoy"><b><i> Que lo disfrutes </i></b></p>
+    </section>    
+    <section class="search">
+        <div class="searchByNameContainer">
+        <label for="searchByName" class="searchLabel">Busca por nombre:</label>
+        <input type="text" id="searchByName" class="searchByName" name="searchByName" >
+        <button class="searchButton" onclick="search()" ><img src="assets/icons/search.svg" alt="search" class="searchIcon"></button>
+        </div>
+        <p class="spaceContainer"><span class="space"></span>o<span class="space"></span></p>
+        <div class="alternativeSearch">
+        <label for="searchByIngredient">Buscar informacion de un ingrediente:</label>
+        <input type="text" id="searchByIngredient" name="searchByIngredient" class="searchByIngredient">
+        <button class="searchButton"><img src="assets/icons/search.svg" alt="search" class="searchIcon" onclick="searchByIngredient()"></button>
+        <button class="randomSearch" onclick="randomSearch()">Probar Suerte</button>
+        </div>
+        <ul id="resultsList"></ul>
+    </section>
+    <section class="container" id="containerI" translate="yes">
+        <h2 id="drinkTitle"></h2>
+        <div class="ingredient">
+            <ul>
+                <li id="typeIngredient"></li>
+                <li id="alcohol"></li>
+                <li id="percentage"></li>
+            </ul>
+            <p id="description"></p>
+        </div>
+        <div class="drink">
+            <img id="drinkIMG" class="drinkImage" alt="drink image">
+            <h3 class="drink-type" id="drinkType"></h3>
+            <div class="ingredients-container"><ul id="ingredientsList"></ul> </div>
+        </div>
+        <div class="cook">
+            <h3 id="titleCook"></h3>
+            <p id="cook"></p>
+            <p id="glass"></p>
+        </div>
+    </section>
+    <footer>
+        <p class="footer">Desarrollado por Ludwig PV <span>      
+            <img src="assets/icons/github.svg" alt="Github" class="github">
+            <img src="assets/icons/portfolio.svg" alt="Portofolio" class="portfolio"></span>
+        </p>
+    </footer>
+    <script src="src/drinksAPI.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+:root {
+    --background: linear-gradient(45deg, rgba(211,3,52,1) 0%, rgba(176,3,43,1) 44%, rgba(133,0,31,1) 100%);
+    --red: rgba(211,3,52,1) ;
+    --strong-red: rgba(133,0,31,1);
+    --very-strong-red: #181516;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 1.2rem;
+    background-color: var(--very-strong-red);
+    color: var(--red);
+}
+
+/* Empieza la primera seccion, descripcion y estilos de busqueda */
+
+section {
+    padding: 2rem;
+}
+
+.cup {
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.4rem;
+}
+
+.descriptionSearch {
+    background: var(--background);
+    color: beige; 
+}
+
+.description {
+    margin-bottom: 1rem;
+}
+
+.linkAPI {
+    text-decoration: none;
+    color: gold;
+}
+
+.enjoy {
+    margin-top: .6rem;
+    text-align: center;
+}
+
+/* Estilos de busqueda por nombre */
+
+.searchByNameContainer, .alternativeSearch {
+    padding: 8px;
+    margin-top: 1rem;
+}
+
+.alternativeSearch {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.searchByName, .searchByIngredient {
+    height: 30px;
+    position: relative;
+    border-radius: 24px;
+    margin-top: .5rem;
+    width: 100%;
+    text-indent: 1rem;
+}
+
+.searchButton {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    right: 2.5rem;
+    position: absolute;
+    background: transparent;
+    border: none;
+    transition: .2s;
+    margin-top: .5rem;
+}
+
+.searchButton:hover {
+    background-color: var(--red);
+    border: 1px solid black;
+    transition: .2s;
+}
+
+.searchIcon {
+    width: 80%;
+    height: 80%;
+}
+
+/* Buscadores alternativos */
+
+.spaceContainer {
+    display: flex;
+    width: 100%;
+    padding: 12px;
+}
+
+.space {
+    width: 100%;
+    height: 1px;
+    margin: .7rem;
+    background-color: gray;
+}
+
+.drinkImage {
+    width: 100%;
+    max-width: 470px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    visibility: hidden;
+}
+
+.searchBlock {
+    border-radius: 30px;
+}
+
+.selectSearch {
+    text-indent: .5rem;
+}
+
+/* button {
+    background-color: var(--red);
+    color: beige;
+}
+
+button:hover {
+    background-color: var(--strong-red);
+} */
+
+.randomSearch {
+    display: none;
+}
+
+li {
+    list-style: none;
+    text-align: center;
+}
+
+/* Section Container */
+
+#description {
+    margin-top: 1rem;
+}
+
+.container {
+    background: var(--background);
+    color: beige;
+}
+
+.drink-type {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.cook {
+    margin-top: 1rem;
+}
+footer {
+    background-color: var(--very-strong-red);
+    color: beige;
+    height: 40px;
+    text-align: center;
+}
+
+.github, .portfolio {
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    display: inline-block;
+    margin: 5px 0 0 10px;
+}
